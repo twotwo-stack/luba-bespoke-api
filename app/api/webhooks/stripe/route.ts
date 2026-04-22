@@ -173,7 +173,7 @@ export async function POST(req: NextRequest) {
         await handleChargeRefunded(event.data.object as Stripe.Charge)
         break
 
-      case 'transfer.paid':
+      case 'transfer.created':
         await handleTransferPaid(event.data.object as Stripe.Transfer)
         break
 
